@@ -1,7 +1,7 @@
 ## Objective
 Understand data persistence with volumes.
 
-### Whagt is Docker Volume?
+### What is Docker Volume?
 A Docker volume is a persistent storage mechanism that allows data to exist independently of a container’s lifecycle.
 
 It stores data outside the container’s filesystem, so the data remains even if the container is stopped or deleted.
