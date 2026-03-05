@@ -1,4 +1,4 @@
-# Docker Hub and Docker Compose
+# Lab-01: Docker Hub and Docker Compose
 
 **Objective**: Master Docker Hub operations and build production-ready multi-container applications
 
