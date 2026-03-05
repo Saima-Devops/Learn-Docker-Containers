@@ -79,6 +79,7 @@ func main() {
     log.Fatal(http.ListenAndServe(":8080", nil))
 }
 ```
+---
 
 ### Step 2: Single-Stage Dockerfile (Bad Example)
 
@@ -104,6 +105,8 @@ docker images | grep go-app
 ```
 
 **Expected Size:** ~800MB+ (includes entire Go toolchain!) ❌
+
+---
 
 ### Step 3: Multi-Stage Dockerfile (Best Practice)
 
@@ -140,6 +143,8 @@ docker images | grep go-app
 
 **Expected Size:** ~15-20MB (97% reduction!) ✅
 
+---
+
 ### Step 4: Test Both Images
 
 ```bash
@@ -162,6 +167,8 @@ curl http://localhost:8080
 # Clean up
 docker stop multi && docker rm multi
 ```
+
+---
 
 ### Step 5: Analyze the Difference
 
