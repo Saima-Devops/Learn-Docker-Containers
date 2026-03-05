@@ -25,7 +25,7 @@ docker rm temp-container
 # Try to find the data - IT'S GONE!
 ```
 
-**Problem:** Data is lost when container is deleted!
+**Problem:** Data is lost when the container is deleted!
 
 ---
 
@@ -123,7 +123,7 @@ docker volume prune
 <br>
 
 ✅ **Lab 3 is Completed!**  
-Volumes persist data across container lifecycles!
+Volumes persist data across containers throughout the whole lifecycle!
 
 
 ---
