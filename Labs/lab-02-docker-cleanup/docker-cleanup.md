@@ -131,6 +131,39 @@ docker network prune
 
 ---
 
+## 🚀 Step 6 – System-Wide Cleanup
+
+To remove everything unused in one command:
+```bash
+docker system prune
+```
+
+This removes:
+
+- Stopped containers
+
+- Unused networks
+
+- Dangling images
+
+- Build cache
+
+**To remove everything unused including images:**
+
+```bash
+docker system prune -a
+```
+
+To also remove unused volumes:
+
+```bash
+docker system prune -a --volumes
+```
+
+> ⚠️ This is powerful. Always review before confirming.
+
+---
+
 ## 🧠 Understanding Docker Storage
 
 **Docker stores data in:**
@@ -177,7 +210,7 @@ docker system df
 You should see significantly reduced disk usage.
 
 
-🎉 Congratulations! You now know how to safely manage Docker storage.
+> 🎉 Congratulations! You now know how to safely manage Docker storage.
 
 <br>
 Next, we’ll move into building custom images with Dockerfiles.
