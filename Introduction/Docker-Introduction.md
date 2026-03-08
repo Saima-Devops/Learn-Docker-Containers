@@ -237,3 +237,5 @@ docker push myimage:1.0
 -----
 
 In the next lab, you'll run your first container and see this in action 🚀
+
+- Labs/lab-01-docker-basics (https://github.com/Saima-Devops/Learn-Docker-Containers/tree/main/Labs)
