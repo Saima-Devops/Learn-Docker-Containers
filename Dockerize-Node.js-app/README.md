@@ -248,3 +248,26 @@ nodemon index.js
 ✔ Restarts the server automatically
 
 ----
+
+# Bonus!
+
+## ⚙️ Setup Script
+
+- Copy `setup.sh` to your local environment
+- Run the automatic dependency checker:
+
+```bash
+chmod +x setup.sh
+./setup.sh
+```
+
+
+This script will:
+
+- Check Node.js & npm (Node.js includes npm)
+- Install missing dependencies
+- Install Git if missing
+- Prompt for nodemon installation
+- Guide Docker installation
+
+-----
