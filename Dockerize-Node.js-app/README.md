@@ -1,4 +1,4 @@
-# 🚀 Node.js + Docker Demo (Step-by-Step Guide)
+# 🚀 Node.js + Docker Demo (with LIVE Reload Support)
 
 This guide walks you through creating a simple Node.js app using Express and running it inside a Docker container.
 
@@ -46,11 +46,26 @@ app.listen(port, () => {
 });
 ```
 
-### 2. Update `package.json` scripts
+### 2. Update `package.json` script with the following:
 
 ```json
-"scripts": {
-  "start": "node index.js"
+{
+  "name": "app1",
+  "version": "1.0.0",
+  "description": "Node.js application with Express",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js",
+    
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+
 }
 ```
 
@@ -127,11 +142,28 @@ Hello from Saima Usman!
 npm install --save-dev nodemon
 ```
 
-### 2. Update `package.json`
+### 2. Updated `package.json` (Replace the old code with the following)
 
 ```json
-"scripts": {
-  "start": "nodemon index.js"
+{
+  "name": "app1",
+  "version": "1.0.0",
+  "description": "Node.js application with Express",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
 }
 ```
 
@@ -141,11 +173,78 @@ npm install --save-dev nodemon
 docker run -p 3000:3000 -v $(pwd):/app node-docker-demo
 ```
 
+<img width="1147" height="361" alt="image" src="https://github.com/user-attachments/assets/70312806-b394-4439-b3ec-4425e5952fdd" />
+
+----
+
 💡 Now your app will automatically restart when you change the code!
+
+----
+
+### 4. When you edit index.json
+
+- Let the **Running Server Terminal** OPEN!!
+- Open the code file in another terminal tab
+- Save the Changes
+- OR Pull the changes from Github repo
+- That's it!!
+
+🎉 Your app will automatically accept the changes. No need of restarting the server again and again. Hurrey!!
 
 ---
 
-## 🎉 Done!
+## ✅ Nodemon + Volume - Development Mode with Live Reload
+
+Run your command with **volume + nodemon**:
+
+```bash
+docker run -p 3000:3000 -v $(pwd):/app node-docker-demo npm run dev
+```
+
+After you edit & save:
+
+✔ NOTHING TO DO\
+✔ Just refresh browser
+
+Because:
+
+✔ volume syncs files\
+✔ nodemon restarts automatically
+
+------
+
+## Done!
 
 You now have a Dockerized Node.js app with live-reload support for development.
 
+----
+
+## 🔄 What is Nodemon?
+
+Nodemon is a development tool that automatically restarts your **Node.js app** whenever you change your code.
+
+Normally, without nodemon:
+
+```bash
+node index.js
+```
+
+If you edit your code:
+
+❌ You must manually stop and restart the server every time.
+
+<br>
+
+## ⚡ What Nodemon Does
+
+With nodemon:
+
+```bash
+nodemon index.js
+```
+
+✔ Watches your files\
+✔ Detects changes\
+✔ Restarts the server automatically
+
+----
