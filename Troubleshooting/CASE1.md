@@ -1,10 +1,11 @@
-# Your .pem file Permissions are too Open
+#  .pem file Permission Denied
 
-
+```bash
 *****************************
 UN-PROTECTED PRIVATE KEY FILE
 *****************************
 Permissions are too open.
+```
 While connecting with AWS through any SSH client, we usually get this error
 
 
